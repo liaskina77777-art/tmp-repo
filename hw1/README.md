@@ -32,4 +32,15 @@ if __name__ == "__main__":
 3) делаем файл исполняемым: chmod +x complement.py
 4) делаем первый коммит:
 git add hw1/complement.py
-git commit -m "hw1"
+git commit -m "hw1: add complement.py with basic functionality"(коммит 8f31bdd)
+5) далее сделала второй коммит: 
+git add hw1/README.md
+git commit -m "hw11: add README with description"(коммит 6с61165)
+6) также у меня были неудачные коммиты:
+git commit -m "hw11"
+git commit -m "hw12"
+7) git push - для отправки коммита
+8) для проверки состояния я также использовала 3 команды: 
+git status
+git log --oneline
+git log --oneline --branches --remotes --graph
