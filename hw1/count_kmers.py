@@ -1,44 +1,52 @@
 #!/usr/bin/env python3
-import argparse
+
 import json
+import sys
+import argparse
+from collections import defaultdict
 
 def read_fasta(filename):
     sequences = {}
-    with open(filename) as f:
-        name = None
-        seq = []
+    current_seq = ""
+    current_header = ""
+    
+    with open(filename, 'r') as f:
         for line in f:
             line = line.strip()
             if line.startswith('>'):
-                if name:
-                    sequences[name] = ''.join(seq)
-                name = line[1:]
-                seq = []
+                if current_header:
+                    sequences[current_header] = current_seq
+                current_header = line[1:]  # убираем '>'
+                current_seq = ""
             else:
-                seq.append(line)
-        if name:
-            sequences[name] = ''.join(seq)
+                current_seq += line
+        if current_header:
+            sequences[current_header] = current_seq
+    
     return sequences
 
-def count_kmers(seq, k=4):
-    kmers = {}
-    for i in range(len(seq) - k + 1):
-        kmer = seq[i:i+k]
-        kmers[kmer] = kmers.get(kmer, 0) + 1
-    return kmers
+def count_kmers(sequence, k=4):
+    kmers = defaultdict(int)
+    for i in range(len(sequence) - k + 1):
+        kmer = sequence[i:i+k]
+        kmers[kmer] += 1
+    return dict(kmers)
 
 def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--fa', required=True, help='input FASTA file')
+    parser = argparse.ArgumentParser(description='Подсчёт k-меров в FASTA файле')
+    parser.add_argument('--fa', required=True, help='Входной FASTA файл')
     args = parser.parse_args()
-
-    seqs = read_fasta(args.fa)
+    
+    sequences = read_fasta(args.fa)
+    
     result = {}
-    for name, seq in seqs.items():
-        result[name] = count_kmers(seq, k=4)
-
+    for header, seq in sequences.items():
+        result[header] = count_kmers(seq, k=4)
+    
     with open('cnts.json', 'w') as f:
         json.dump(result, f, indent=2)
+    
+    print(f"Результат сохранён в cnts.json")
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
