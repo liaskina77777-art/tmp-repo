@@ -35,6 +35,9 @@ def count_kmers(sequence, k=4):
 def main():
     parser = argparse.ArgumentParser(description='Подсчёт k-меров в FASTA файле')
     parser.add_argument('--fa', required=True, help='Входной FASTA файл')
+    parser.add_argument('--k', type=int, default=4, help='Длина k-мера (по умолчанию: 4)')
+    parser.add_argument('--out', default='cnts.json', help='Выходной JSON файл')
+
     args = parser.parse_args()
     
     sequences = read_fasta(args.fa)
