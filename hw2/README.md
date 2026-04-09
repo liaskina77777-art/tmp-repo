@@ -27,11 +27,11 @@
 Результат выполнения: 
 Results saved to domains.json
 **Statistics:**
-    ** - Top cell line: K562**
-    ** - TF proteins found: 23**
-    ** - Mapped to UniProt: 23**
-    ** - Proteins with domains: 18**
-    ** - Total Pfam domains found: 30**, или, если описать чуть понятнее:
+	-**Top cell line: K562**
+    -**TF proteins found: 23**
+    -**Mapped to UniProt: 23**
+    -**Proteins with domains: 18**
+    -**Total Pfam domains found: 30**, или, если описать чуть понятнее:
   	
 K562 - клеточная линия эритролейкемии человека, широко используется в ENCODE как модельная система ,
 23 транскрипционных фактора найдены с ChIP-seq данными, 100% успешный маппинг gene symbols -> UniProt ID,
