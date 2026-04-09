@@ -25,7 +25,7 @@ def read_fasta(filename):
     
     return sequences
 
-def count_kmers(sequence, k=4):
+def count_kmers(sequence, k=2):
     kmers = defaultdict(int)
     for i in range(len(sequence) - k + 1):
         kmer = sequence[i:i+k]
@@ -41,7 +41,7 @@ def main():
     
     result = {}
     for header, seq in sequences.items():
-        result[header] = count_kmers(seq, k=4)
+        result[header] = count_kmers(seq, k=2)
     
     with open('cnts.json', 'w') as f:
         json.dump(result, f, indent=2)
