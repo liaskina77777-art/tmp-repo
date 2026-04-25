@@ -1,7 +1,7 @@
 # ДЗ_1: работа с Git
 ## TASK_2
 
-## Блок заданий 1-3
+## Блок заданий 1-2
 
 1. *nano complement.py* - создаём файл
 2. вставляем туда код для рассчёта reverse_complement и GC-состава:
@@ -49,6 +49,15 @@ if __name__ == "__main__":
 *git status*
 *git log --oneline*
 *git log --oneline --branches --remotes --graph*
+
+## Задание 3
+1. Был создан скрипт *hw1/count_kmers.py*, который выводит количество 4 меров в последовательности fasta-файла.
+2. Далее я отпраивла его на Git, а потом внесла изменения из браузера в этот файл, и заменила k=4 на = 2. А далее я  внесла изменения в скрипте через терминал добавив параметры --k,--out.
+3. Далее я закоммитила локальные изменения с помощью *git add count_kmers.py* и *git commit -m "Add --k and --out parametrs"*, а далее получила конфликт *git push origin main*
+4. Далее попыталась решить конфликт *git pull --no-rebase origin main* и в скрипте count_kmers.py изменила default=4 на default=2.
+5. Потом снова добавила коммит *git add count_kmers.py*, *git commit -m "Merge: resolve conflict - keep --k/--out with default k=2"* и отправила ветку *git push origin main*
+6. В итоге конфликт разрешился
+ 
 
 ## Задание 4
 
