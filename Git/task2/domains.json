@@ -1,0 +1,73 @@
+{
+  "PREB": [],
+  "TEAD4": [
+    "TEA/ATTS domain",
+    "YAP binding domain"
+  ],
+  "ATF1": [
+    "pKID domain"
+  ],
+  "ZKSCAN8": [
+    "SCAN domain",
+    "Zinc finger, C2H2 type",
+    "KRAB box"
+  ],
+  "ZBTB33": [
+    "BTB/POZ domain"
+  ],
+  "ZNF317": [
+    "Zinc finger, C2H2 type",
+    "KRAB box"
+  ],
+  "CEBPB": [
+    "Basic region leucine zipper"
+  ],
+  "ZNF609": [],
+  "MED1": [
+    "Mediator of RNA polymerase II transcription subunit 1"
+  ],
+  "ATF3": [
+    "bZIP transcription factor"
+  ],
+  "TGIF2": [],
+  "MLX": [
+    "Helix-loop-helix DNA-binding domain"
+  ],
+  "SMAD3": [],
+  "SP1": [
+    "DAN domain"
+  ],
+  "E2F1": [
+    "E2F transcription factor CC-MB domain",
+    "E2F/DP family winged-helix DNA-binding domain"
+  ],
+  "ELF4": [
+    "Transcription factor protein N terminal",
+    "Ets-domain"
+  ],
+  "ZBTB1": [
+    "BTB/POZ domain"
+  ],
+  "ATF2": [
+    "bZIP transcription factor"
+  ],
+  "CEBPG": [
+    "Basic region leucine zipper"
+  ],
+  "ZBTB49": [
+    "BTB/POZ domain"
+  ],
+  "STAT6": [
+    "STAT protein, DNA binding domain",
+    "STAT transcription factor, coiled-coil domain",
+    "Signal transducer and activator of transcription, linker domain",
+    "STAT protein, protein interaction domain",
+    "SH2 domain",
+    "STAT6 C-terminal"
+  ],
+  "HMGXB4": [],
+  "JUND": [
+    "bZIP transcription factor",
+    "Jun-like transcription factor"
+  ]
+}
